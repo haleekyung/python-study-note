@@ -75,18 +75,21 @@ female = df2.income[df2.sex == 'f']
     - 결과값으로 t-test값의 결과([0])와 p-value값([1])을 볼 수 있다.
     - t-test 값은 [0]번째 리스트로 저장될 수 있음
     - p-value 값은 [1]번째 리스트로 저장될 수 있음
+
+
 - t-test의 결과값은 변수로 저장할 수 있다.
     - `ttest_result(변수명) = stats.ttest_ind(변수명1, 변수명2)`
     - `ttest_result[0]` : t-test 값
     - `ttest_result[1]` : p-value 값
 
+
 - t-test의 값이 유의한지 알아볼 수 있는 조건문을 통해 유의여부를 한눈에 볼 수 있다.
 
     ```python
     if ttest_result[1] > .05:
-    	print('p-value는 %f로 95% 수준에서 유의하지 않음' % ttest_result[1])
+        print('p-value는 %f로 95% 수준에서 유의하지 않음' % ttest_result[1])
     else:
-    	print('p-value는 %f로 95% 수준에서 유의함' % ttest_result[1])
+        print('p-value는 %f로 95% 수준에서 유의함' % ttest_result[1])
     ```
 
 ### 4) 상관분석 (Correlation)
